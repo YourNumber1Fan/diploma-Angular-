@@ -1,0 +1,227 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.input {
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border-radius: 3px;
+  border: 2px solid #709FDC;
+  background: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $light-blue-text-color;
+}
+
+nav{
+  ul{
+    li{
+      a{
+        color: $dark-blue-text-color;
+
+        &.active{
+          color: $light-blue-text-color;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  background: #709FDC;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.mat-mdc-menu-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: $light-blue-text-color;
+  }
+}
+
+.popup {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 99;
+
+  .popup-consultation-form {
+    position: fixed;
+    top: calc(50% - 245px);
+    left: calc(50% - 365px);
+    padding: 95px 160px 95px 160px;
+    border-radius: 10px;
+    border: 2px solid #709FDC;
+    background: #FFF;
+    z-index: 100;
+
+    .close-popup {
+      position: absolute;
+      top: 32px;
+      right: 31px;
+      cursor: pointer;
+    }
+
+    .popup-info{
+      .popup-title{
+        @include head-lora-38;
+        text-align: center;
+        max-width: 406px;
+        margin-bottom: 20px;
+      }
+
+      .popup-inputs{
+
+        .popup-select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 422px;
+          margin-bottom: 5px;
+          border-radius: 2px;
+          color: $light-blue-text-color;
+          outline:none;
+
+          option.placeholder {
+            color: #A8ABA7;
+          }
+        }
+
+        .popup-input{
+          width: 422px;
+          border-radius: 3px;
+          background: #FFF;
+          margin-bottom: 5px;
+
+          .placeholder{
+            color: #A8ABA7;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+
+        .popup-button{
+          .button{
+            cursor: pointer;
+            border-radius: 5px;
+            background: $light-blue-text-color;
+            width: 422px;
+            padding: 15px;
+            color: #FFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+
+            &:disabled {
+              background: gray;
+              cursor: not-allowed;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .popup-success{
+    position: fixed;
+    top: calc(50% - 245px);
+    left: calc(50% - 365px);
+    text-align: center;
+    padding: 95px 160px 95px 160px;
+    border-radius: 10px;
+    border: 2px solid #709FDC;
+    background-color: #FFF;
+    z-index: 101;
+
+    .popup-close{
+      position: absolute;
+      top: 32px;
+      right: 31px;
+      cursor: pointer;
+    }
+
+    .popup-title{
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .popup-text{
+      color: #1E1A2B;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+
+    .popup-button{
+      .button{
+        width: 73px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background: #709FDC;
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.invalid-feedback{
+  color: red;
+  display: block;
+  margin-top: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  max-width: 420px;
+}
+
+h1, h3 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 26px;
+  color: $light-blue-text-color;
+}

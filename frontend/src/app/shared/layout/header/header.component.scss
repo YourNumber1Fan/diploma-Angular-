@@ -1,0 +1,130 @@
+@import "../../../../assets/styles/variables";
+
+header.header {
+  padding: 40px 0 40px 0;
+
+  .container {
+    display: flex;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+
+      span {
+        color: $light-blue-text-color;
+        font-family: 'Jost', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        list-style: none;
+      }
+
+    }
+
+    .header-content {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+
+      .header-content-menu {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        width: 430px;
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-right: 30px;
+            list-style: none;
+            color: $dark-blue-text-color;
+
+            &:last-child{
+              margin-right: 0px;
+            }
+
+            &.active{
+              color: $light-blue-text-color;
+            }
+
+            a {
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .both{
+        margin-left: 257px;
+
+        display: flex;
+        justify-content: space-between;
+        width: 393px;
+
+        .header-content-phone {
+          color: $light-blue-text-color;
+          text-decoration: none;
+          //margin-right: 141px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+        }
+
+        .header-content-profile {
+
+
+          .notLogged{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+              margin-right: 8px;
+              cursor: pointer;
+            }
+
+            span {
+              color: $dark-blue-text-color;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 16px;
+              font-weight: 500;
+              margin-bottom: 4px;
+              cursor: pointer;
+
+            }
+          }
+
+          .logged{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+              margin-right: 8px;
+              cursor: pointer;
+            }
+
+            span {
+              color: $dark-blue-text-color;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 16px;
+              font-weight: 500;
+              margin-bottom: 4px;
+              cursor: pointer;
+
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

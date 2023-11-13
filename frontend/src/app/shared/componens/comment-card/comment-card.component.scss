@@ -1,0 +1,101 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.article-comment {
+  max-width: 854px;
+  &:first-child {
+    margin-top: 20px;
+  }
+
+  .article-comment-head {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 26px;
+    margin-bottom: 15px;
+    max-width: 210px;
+
+    .article-comment-head-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      border: 2px solid $light-blue-text-color;
+      background-color: #B9D5FD;
+      box-sizing: border-box;
+    }
+
+    .article-comment-head-info {
+      .article-comment-head-info-name {
+        color: $light-blue-text-color;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .article-comment-head-info-date {
+        color: #BEBEBE;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  .article-comment-text {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 854px;
+    max-height: 300px;
+    margin-bottom: 39px;
+    color: $dark-blue-text-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .article-comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .article-comment-action {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        color: $dark-blue-text-color;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 3px;
+
+        &.active{
+          color: $light-blue-text-color;
+        }
+        &.not-active{
+          color: $dark-blue-text-color;
+        }
+      }
+
+      svg {
+        color: $dark-blue-text-color;
+      }
+    }
+
+    .article-comment-pretension {
+      cursor: pointer;
+
+      svg {
+        color: $dark-blue-text-color;
+      }
+    }
+  }
+}
